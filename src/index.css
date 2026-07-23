@@ -167,8 +167,8 @@ body {
   border-radius: 9px;
   background: #ffffff;
   box-shadow:
-    0 12px 32px rgb(22 51 0 / 8%),
-    0 2px 5px rgb(22 51 0 / 4%);
+    0 2px 8px rgb(22 51 0 / 4%),
+    0 1px 2px rgb(22 51 0 / 2%);
   transition:
     border-color 180ms ease,
     box-shadow 180ms ease,
@@ -192,8 +192,8 @@ body {
   z-index: 2;
   border-color: #9fe870;
   box-shadow:
-    0 0 0 3px rgb(159 232 112 / 18%),
-    0 14px 34px rgb(22 51 0 / 11%);
+    0 0 0 2px rgb(159 232 112 / 14%),
+    0 3px 10px rgb(22 51 0 / 5%);
 }
 
 .match-card--path-current {
