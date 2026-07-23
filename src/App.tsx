@@ -5,19 +5,23 @@ import tournamentConfigSource from "../tournament.config.yml?raw";
 
 type MatchStatus = "finished" | "planned";
 type ScoreKey = "first" | "second" | "third";
-type TournamentStage = "non-seed" | "quarter" | "semi" | "final";
+type TournamentStage = "round-16" | "quarter" | "semi" | "final";
 type MatchId =
+  | "bracket-16-1"
+  | "bracket-16-2"
+  | "bracket-16-3"
+  | "bracket-16-4"
+  | "bracket-16-5"
+  | "bracket-16-6"
+  | "bracket-16-7"
+  | "bracket-16-8"
   | "bracket-8-1"
   | "bracket-8-2"
   | "bracket-8-3"
   | "bracket-8-4"
   | "bracket-4-1"
   | "bracket-4-2"
-  | "bracket-2-1"
-  | "bracket-qualifier-1"
-  | "bracket-qualifier-2"
-  | "bracket-qualifier-3"
-  | "bracket-qualifier-4";
+  | "bracket-2-1";
 
 interface MatchScore {
   first?: string;
@@ -50,6 +54,10 @@ interface TournamentConfig {
 const config = parse(tournamentConfigSource) as TournamentConfig;
 const scoreKeys: ScoreKey[] = ["first", "second", "third"];
 const matchSources: Partial<Record<MatchId, readonly MatchId[]>> = {
+  "bracket-8-1": ["bracket-16-1", "bracket-16-2"],
+  "bracket-8-2": ["bracket-16-3", "bracket-16-4"],
+  "bracket-8-3": ["bracket-16-5", "bracket-16-6"],
+  "bracket-8-4": ["bracket-16-7", "bracket-16-8"],
   "bracket-4-1": ["bracket-8-1", "bracket-8-2"],
   "bracket-4-2": ["bracket-8-3", "bracket-8-4"],
   "bracket-2-1": ["bracket-4-1", "bracket-4-2"],
@@ -116,7 +124,7 @@ function getHighlightedPath(activeMatchId: MatchId | null) {
 }
 
 function getCurrentStage(stage: unknown): TournamentStage {
-  return stage === "non-seed" ||
+  return stage === "round-16" ||
     stage === "quarter" ||
     stage === "semi" ||
     stage === "final"
@@ -342,6 +350,70 @@ function MergeConnector({
   );
 }
 
+function DoubleMergeConnector({
+  direction,
+  activeBranches,
+}: {
+  direction: "left" | "right";
+  activeBranches: readonly [boolean, boolean, boolean, boolean];
+}) {
+  const firstOutputActive = activeBranches[0] || activeBranches[1];
+  const secondOutputActive = activeBranches[2] || activeBranches[3];
+
+  return (
+    <div
+      className={`double-merge-connector double-merge-connector--${direction}`}
+      aria-hidden="true"
+    >
+      {activeBranches.map((isActive, index) => (
+        <span
+          className={getConnectorClass(
+            `double-merge-connector__branch double-merge-connector__branch--${index + 1}`,
+            isActive,
+          )}
+          key={`branch-${index + 1}`}
+        />
+      ))}
+      <span
+        className={getConnectorClass(
+          "double-merge-connector__spine double-merge-connector__spine--first-top",
+          activeBranches[0],
+        )}
+      />
+      <span
+        className={getConnectorClass(
+          "double-merge-connector__spine double-merge-connector__spine--first-bottom",
+          activeBranches[1],
+        )}
+      />
+      <span
+        className={getConnectorClass(
+          "double-merge-connector__spine double-merge-connector__spine--second-top",
+          activeBranches[2],
+        )}
+      />
+      <span
+        className={getConnectorClass(
+          "double-merge-connector__spine double-merge-connector__spine--second-bottom",
+          activeBranches[3],
+        )}
+      />
+      <span
+        className={getConnectorClass(
+          "double-merge-connector__out double-merge-connector__out--first",
+          firstOutputActive,
+        )}
+      />
+      <span
+        className={getConnectorClass(
+          "double-merge-connector__out double-merge-connector__out--second",
+          secondOutputActive,
+        )}
+      />
+    </div>
+  );
+}
+
 function StraightConnector({ isActive }: { isActive: boolean }) {
   return (
     <div className="straight-connector" aria-hidden="true">
@@ -385,6 +457,41 @@ export default function App() {
         >
           <div className="bracket-scroll">
             <div className="bracket-board">
+              <div
+                className={
+                  currentStage === "round-16"
+                    ? "round-column round-column--current"
+                    : "round-column"
+                }
+                aria-current={currentStage === "round-16" ? "step" : undefined}
+              >
+                <h2 className="round-label">Round of 16</h2>
+                <div className="round-matches round-matches--four">
+                  {renderMatchCard("bracket-16-1")}
+                  {renderMatchCard("bracket-16-2")}
+                  {renderMatchCard("bracket-16-3")}
+                  {renderMatchCard("bracket-16-4")}
+                </div>
+              </div>
+
+              <DoubleMergeConnector
+                activeBranches={[
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-1", "bracket-8-1"),
+                  ),
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-2", "bracket-8-1"),
+                  ),
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-3", "bracket-8-2"),
+                  ),
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-4", "bracket-8-2"),
+                  ),
+                ]}
+                direction="left"
+              />
+
               <div
                 className={
                   currentStage === "quarter"
@@ -488,32 +595,40 @@ export default function App() {
                   {renderMatchCard("bracket-8-4")}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <section
-          className="qualifier-section"
-          aria-labelledby="qualifier-heading"
-        >
-          <div className="qualifier-content">
-            <h2
-              className={
-                currentStage === "non-seed"
-                  ? "qualifier-heading qualifier-heading--current"
-                  : "qualifier-heading"
-              }
-              id="qualifier-heading"
-              aria-current={currentStage === "non-seed" ? "step" : undefined}
-            >
-              Non-seeded qualifiers
-            </h2>
-            <div className="qualifier-scroll">
-              <div className="qualifier-grid">
-                {renderMatchCard("bracket-qualifier-1")}
-                {renderMatchCard("bracket-qualifier-2")}
-                {renderMatchCard("bracket-qualifier-3")}
-                {renderMatchCard("bracket-qualifier-4")}
+              <DoubleMergeConnector
+                activeBranches={[
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-5", "bracket-8-3"),
+                  ),
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-6", "bracket-8-3"),
+                  ),
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-7", "bracket-8-4"),
+                  ),
+                  highlightedPath.edges.has(
+                    getEdgeId("bracket-16-8", "bracket-8-4"),
+                  ),
+                ]}
+                direction="right"
+              />
+
+              <div
+                className={
+                  currentStage === "round-16"
+                    ? "round-column round-column--current"
+                    : "round-column"
+                }
+                aria-current={currentStage === "round-16" ? "step" : undefined}
+              >
+                <h2 className="round-label">Round of 16</h2>
+                <div className="round-matches round-matches--four">
+                  {renderMatchCard("bracket-16-5")}
+                  {renderMatchCard("bracket-16-6")}
+                  {renderMatchCard("bracket-16-7")}
+                  {renderMatchCard("bracket-16-8")}
+                </div>
               </div>
             </div>
           </div>

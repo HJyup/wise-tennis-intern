@@ -1,6 +1,6 @@
 # Wise Table Tennis Championship
 
-A configurable eight-player championship bracket built with React, Vite,
+A configurable sixteen-player championship bracket built with React, Vite,
 TypeScript, Tailwind CSS, and shadcn/ui.
 
 ## Development
@@ -34,10 +34,10 @@ so deuce results such as `"14_12"` are supported.
 Set each match's `date` using the display-ready day and month, such as
 `21st July`.
 
-The four `bracket-qualifier-*` matches belong to the non-seeded qualifying
-round. They use `sets: 1`, so only the `score.first` result is displayed and
-each winner claims one of the four open championship places.
+The eight `bracket-16-*` matches form the opening Round of 16. They use
+`sets: 1`, so only the `score.first` result is displayed. Quarterfinals onward
+default to three sets.
 
-Set the top-level `stage` value to `non-seed`, `quarter`, `semi`, or `final`.
+Set the top-level `stage` value to `round-16`, `quarter`, `semi`, or `final`.
 The selected stage receives a green underline; every other stage keeps a grey
 underline.
