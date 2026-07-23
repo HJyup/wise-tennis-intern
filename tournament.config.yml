@@ -1,3 +1,6 @@
+# Current tournament stage: non-seed | quarter | semi | final
+stage: non-seed
+
 tournament:
   name: Wise Table Tennis Championship
   edition: Summer Singles 2026
@@ -6,55 +9,75 @@ tournament:
 
 # Round of 8 — left side, top to bottom
 bracket-8-1:
-  status: finished
-  opponent_1_name: Maya Chen
-  opponent_2_name: Olivia Park
-  score:
-    first: "11_7"
-    second: "8_11"
-    third: "11_6"
+  status: planned
+  date: TBA
+  opponent_1_name: Ibrahim Mohammad
+  opponent_2_name: TBA
 
 bracket-8-2:
-  status: finished
-  opponent_1_name: Sofia Rossi
-  opponent_2_name: Grace Kim
-  score:
-    first: "11_4"
-    second: "11_9"
-    third: ""
+  status: planned
+  date: TBA
+  opponent_1_name: Andrey Isaevskiy
+  opponent_2_name: TBA
 
 # Round of 8 — right side, top to bottom
 bracket-8-3:
-  status: finished
-  opponent_1_name: Emma Wilson
-  opponent_2_name: Naomi Ito
-  score:
-    first: "9_11"
-    second: "11_6"
-    third: "7_11"
+  status: planned
+  date: TBA
+  opponent_1_name: Julian Ray
+  opponent_2_name: TBA
 
 bracket-8-4:
-  status: finished
-  opponent_1_name: Lena Hoffmann
-  opponent_2_name: Ava Patel
-  score:
-    first: "11_8"
-    second: "11_5"
-    third: ""
+  status: planned
+  date: TBA
+  opponent_1_name: Duncan Cheuk
+  opponent_2_name: TBA
 
 # Semifinals
 bracket-4-1:
   status: planned
-  opponent_1_name: Maya Chen
-  opponent_2_name: Sofia Rossi
+  date: TBA
+  opponent_1_name: TBA
+  opponent_2_name: TBA
 
 bracket-4-2:
   status: planned
-  opponent_1_name: Naomi Ito
-  opponent_2_name: Lena Hoffmann
+  date: TBA
+  opponent_1_name: TBA
+  opponent_2_name: TBA
 
 # Championship match
 bracket-2-1:
   status: planned
+  date: TBA
+  opponent_1_name: TBA
+  opponent_2_name: TBA
+
+# Non-seeded qualifiers — one set, four winners advance
+bracket-qualifier-1:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: TBA
+  opponent_2_name: TBA
+
+bracket-qualifier-2:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: TBA
+  opponent_2_name: TBA
+
+bracket-qualifier-3:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: TBA
+  opponent_2_name: TBA
+
+bracket-qualifier-4:
+  status: planned
+  date: TBA
+  sets: 1
   opponent_1_name: TBA
   opponent_2_name: TBA
