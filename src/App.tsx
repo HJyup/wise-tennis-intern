@@ -4,7 +4,7 @@ import { parse } from "yaml";
 import tournamentConfigSource from "../tournament.config.yml?raw";
 
 type MatchStatus = "finished" | "planned";
-type ScoreKey = "first" | "second" | "third";
+type ScoreKey = "first" | "second" | "third" | "fourth" | "fifth";
 type TournamentStage = "round-16" | "quarter" | "semi" | "final";
 type MatchId =
   | "bracket-16-1"
@@ -27,12 +27,14 @@ interface MatchScore {
   first?: string;
   second?: string;
   third?: string;
+  fourth?: string;
+  fifth?: string;
 }
 
 interface MatchConfig {
   status: MatchStatus;
   date?: string;
-  sets?: 1 | 3;
+  sets?: 1 | 3 | 5;
   opponent_1_name?: string;
   opponent_2_name?: string;
   score?: MatchScore;
@@ -52,7 +54,7 @@ interface TournamentConfig {
 }
 
 const config = parse(tournamentConfigSource) as TournamentConfig;
-const scoreKeys: ScoreKey[] = ["first", "second", "third"];
+const scoreKeys: ScoreKey[] = ["first", "second", "third", "fourth", "fifth"];
 const matchSources: Partial<Record<MatchId, readonly MatchId[]>> = {
   "bracket-8-1": ["bracket-16-1", "bracket-16-2"],
   "bracket-8-2": ["bracket-16-3", "bracket-16-4"],
@@ -142,14 +144,14 @@ function parseSetScore(score?: string): [number, number] | null {
 }
 
 function getMatchScoreKeys(match: MatchConfig) {
-  return match.sets === 1 ? scoreKeys.slice(0, 1) : scoreKeys;
+  return scoreKeys.slice(0, match.sets ?? 3);
 }
 
 function getWinner(match: MatchConfig) {
   if (match.status !== "finished") return null;
 
   const matchScoreKeys = getMatchScoreKeys(match);
-  const requiredWins = matchScoreKeys.length === 1 ? 1 : 2;
+  const requiredWins = Math.floor(matchScoreKeys.length / 2) + 1;
   const wins = matchScoreKeys.reduce(
     (total, key) => {
       const setScore = parseSetScore(match.score?.[key]);
@@ -181,10 +183,13 @@ function PlayerRow({
   const isLoser = winner !== null && winner !== playerIndex;
   const isTba = name === "TBA";
   const matchScoreKeys = getMatchScoreKeys(match);
-  const scoreClassName =
-    matchScoreKeys.length === 1
-      ? "set-scores set-scores--single"
-      : "set-scores";
+  const scoreClassName = [
+    "set-scores",
+    matchScoreKeys.length === 1 ? "set-scores--single" : "",
+    matchScoreKeys.length === 5 ? "set-scores--five" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div
@@ -271,11 +276,13 @@ function MatchCard({
         <div className="score-heading">
           <span className="match-date">{match.date ?? "Date TBA"}</span>
           <span
-            className={
-              matchScoreKeys.length === 1
-                ? "set-labels set-labels--single"
-                : "set-labels"
-            }
+            className={[
+              "set-labels",
+              matchScoreKeys.length === 1 ? "set-labels--single" : "",
+              matchScoreKeys.length === 5 ? "set-labels--five" : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
             aria-hidden="true"
           >
             {matchScoreKeys.map((key, index) => (

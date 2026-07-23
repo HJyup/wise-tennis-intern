@@ -99,15 +99,15 @@ body {
   --stage-height: clamp(600px, 75vh, 720px);
   display: grid;
   grid-template-columns:
-    minmax(190px, 1fr) clamp(30px, 2.2vw, 52px)
-    minmax(195px, 1fr) clamp(34px, 2.5vw, 58px)
-    minmax(195px, 1fr) clamp(28px, 2vw, 48px)
-    minmax(215px, 1.1fr) clamp(28px, 2vw, 48px)
-    minmax(195px, 1fr) clamp(34px, 2.5vw, 58px)
-    minmax(195px, 1fr) clamp(30px, 2.2vw, 52px)
-    minmax(190px, 1fr);
+    minmax(220px, 1fr) clamp(30px, 2.2vw, 52px)
+    minmax(265px, 1fr) clamp(34px, 2.5vw, 58px)
+    minmax(265px, 1fr) clamp(28px, 2vw, 48px)
+    minmax(325px, 1.1fr) clamp(28px, 2vw, 48px)
+    minmax(265px, 1fr) clamp(34px, 2.5vw, 58px)
+    minmax(265px, 1fr) clamp(30px, 2.2vw, 52px)
+    minmax(220px, 1fr);
   width: min(100%, 2400px);
-  min-width: 1780px;
+  min-width: 2150px;
   margin: 0 auto;
   padding: 10px clamp(24px, 3vw, 52px) 16px;
 }
@@ -244,6 +244,10 @@ body {
   grid-template-columns: 26px;
 }
 
+.set-labels--five {
+  grid-template-columns: repeat(5, 26px);
+}
+
 .players {
   display: grid;
   gap: 4px;
@@ -287,6 +291,10 @@ body {
 
 .set-scores--single {
   grid-template-columns: 26px;
+}
+
+.set-scores--five {
+  grid-template-columns: repeat(5, 26px);
 }
 
 .set-score {
