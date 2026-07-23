@@ -236,6 +236,10 @@ body {
   grid-template-columns: 26px;
 }
 
+.set-labels--five {
+  grid-template-columns: repeat(5, 26px);
+}
+
 .players {
   display: grid;
   gap: 4px;
@@ -279,6 +283,10 @@ body {
 
 .set-scores--single {
   grid-template-columns: 26px;
+}
+
+.set-scores--five {
+  grid-template-columns: repeat(5, 26px);
 }
 
 .set-score {

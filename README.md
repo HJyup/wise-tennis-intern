@@ -37,6 +37,8 @@ Set each match's `date` using the display-ready day and month, such as
 The four `bracket-qualifier-*` matches belong to the non-seeded qualifying
 round. They use `sets: 1`, so only the `score.first` result is displayed and
 each winner claims one of the four open championship places.
+The `bracket-2-1` championship uses `sets: 5`, displays S1 through S5, and is
+won by the first player to take three sets.
 
 Set the top-level `stage` value to `non-seed`, `quarter`, `semi`, or `final`.
 The selected stage receives a green underline; every other stage keeps a grey
