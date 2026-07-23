@@ -13,6 +13,10 @@ bracket-8-1:
   date: TBA
   opponent_1_name: TBA
   opponent_2_name: TBA
+#  score:
+#    first: "11_7"
+#    second: "8_11"
+#    third: "11_6"
 
 bracket-8-2:
   status: planned
