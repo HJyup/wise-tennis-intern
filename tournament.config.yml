@@ -1,5 +1,5 @@
-# Current tournament stage: non-seed | quarter | semi | final
-stage: non-seed
+# Current tournament stage: round-16 | quarter | semi | final
+stage: round-16
 
 tournament:
   name: Wise Table Tennis Championship
@@ -7,20 +7,80 @@ tournament:
   location: London Table Tennis Centre
   date: 23 July 2026
 
+# Round of 16 — left side, top to bottom; one set per match
+# Quarter 1: Ibrahim's path; Vova or Ashmeet will provide the quarterfinal test.
+bracket-16-1:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Ibrahim Mohammad
+  opponent_2_name: Raahym
+
+bracket-16-2:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Vova Drozdov
+  opponent_2_name: Ashmeet Jadhav
+
+# Quarter 2: Duncan's path; Nicole is the projected quarterfinal challenger.
+bracket-16-3:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Duncan Cheuk
+  opponent_2_name: Jamie Cline
+
+bracket-16-4:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Nicole Kirk
+  opponent_2_name: Levon Davtyan
+
+# Round of 16 — right side, top to bottom; one set per match
+# Quarter 3: Julian's path; Julian and Naol are 1–1 after deduplication.
+bracket-16-5:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Julian Ray
+  opponent_2_name: Mahe Chowdury
+
+bracket-16-6:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Naol Duguma
+  opponent_2_name: Zi Tong Hon
+
+# Quarter 4: Andrey's path; his only Ziven match finished 13–11.
+bracket-16-7:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Andrey Isaevskiy
+  opponent_2_name: Grisha Mokin
+
+bracket-16-8:
+  status: planned
+  date: TBA
+  sets: 1
+  opponent_1_name: Ziven Rokhit
+  opponent_2_name: Jayasree Kolanuvada
+
 # Round of 8 — left side, top to bottom
 bracket-8-1:
   status: planned
   date: TBA
+  sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
-#  score:
-#    first: "11_7"
-#    second: "8_11"
-#    third: "11_6"
 
 bracket-8-2:
   status: planned
   date: TBA
+  sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
@@ -28,12 +88,14 @@ bracket-8-2:
 bracket-8-3:
   status: planned
   date: TBA
+  sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 bracket-8-4:
   status: planned
   date: TBA
+  sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
@@ -41,12 +103,14 @@ bracket-8-4:
 bracket-4-1:
   status: planned
   date: TBA
+  sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 bracket-4-2:
   status: planned
   date: TBA
+  sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
@@ -55,34 +119,5 @@ bracket-2-1:
   status: planned
   date: TBA
   sets: 5
-  opponent_1_name: TBA
-  opponent_2_name: TBA
-
-# Non-seeded qualifiers — one set, four winners advance
-bracket-qualifier-1:
-  status: planned
-  date: TBA
-  sets: 1
-  opponent_1_name: TBA
-  opponent_2_name: TBA
-
-bracket-qualifier-2:
-  status: planned
-  date: TBA
-  sets: 1
-  opponent_1_name: TBA
-  opponent_2_name: TBA
-
-bracket-qualifier-3:
-  status: planned
-  date: TBA
-  sets: 1
-  opponent_1_name: TBA
-  opponent_2_name: TBA
-
-bracket-qualifier-4:
-  status: planned
-  date: TBA
-  sets: 1
   opponent_1_name: TBA
   opponent_2_name: TBA
