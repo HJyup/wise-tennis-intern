@@ -71,53 +71,53 @@ bracket-16-8:
 
 # Round of 8 — left side, top to bottom
 bracket-8-1:
-  status: 3th August
-  date: TBA
+  status: planned
+  date: 3rd August
   sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 bracket-8-2:
-  status: 4th August
-  date: TBA
+  status: planned
+  date: 4th August
   sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 # Round of 8 — right side, top to bottom
 bracket-8-3:
-  status: 5th August
-  date: TBA
+  status: planned
+  date: 5th August
   sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 bracket-8-4:
-  status: 6th August
-  date: TBA
+  status: planned
+  date: 6th August
   sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 # Semifinals
 bracket-4-1:
-  status: 10th August
-  date: TBA
+  status: planned
+  date: 10th August
   sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 bracket-4-2:
-  status: 12th August
-  date: TBA
+  status: planned
+  date: 12th August
   sets: 3
   opponent_1_name: TBA
   opponent_2_name: TBA
 
 # Championship match
 bracket-2-1:
-  status: 14th August
-  date: TBA
+  status: planned
+  date: 14th August
   sets: 5
   opponent_1_name: TBA
   opponent_2_name: TBA
