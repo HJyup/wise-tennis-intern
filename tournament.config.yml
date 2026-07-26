@@ -10,30 +10,30 @@ tournament:
 # Round of 16 — left side, top to bottom; one set per match
 # Quarter 1: Ibrahim's path; Vova or Ashmeet will provide the quarterfinal test.
 bracket-16-1:
-  status: 27th July
-  date: TBA
+  status: planned
+  date: 27th July
   sets: 1
   opponent_1_name: Ibrahim Mohammad
   opponent_2_name: Raahym
 
 bracket-16-2:
-  status: 27th July
-  date: TBA
+  status: planned
+  date: 27th July
   sets: 1
   opponent_1_name: Vova Drozdov
   opponent_2_name: Ashmeet Jadhav
 
 # Quarter 2: Duncan's path; Nicole is the projected quarterfinal challenger.
 bracket-16-3:
-  status: 28th July
-  date: TBA
+  status: planned
+  date: 28th July
   sets: 1
   opponent_1_name: Duncan Cheuk
   opponent_2_name: Jamie Cline
 
 bracket-16-4:
-  status: 28th July
-  date: TBA
+  status: planned
+  date: 28th July
   sets: 1
   opponent_1_name: Nicole Kirk
   opponent_2_name: Levon Davtyan
@@ -41,30 +41,30 @@ bracket-16-4:
 # Round of 16 — right side, top to bottom; one set per match
 # Quarter 3: Julian's path; Julian and Naol are 1–1 after deduplication.
 bracket-16-5:
-  status: 29th July
-  date: TBA
+  status: planned
+  date: 29th July
   sets: 1
   opponent_1_name: Julian Ray
   opponent_2_name: Mahe Chowdury
 
 bracket-16-6:
-  status: 29th July
-  date: TBA
+  status: planned
+  date: 29th July
   sets: 1
   opponent_1_name: Naol Duguma
   opponent_2_name: Zi Tong Hon
 
 # Quarter 4: Andrey's path; his only Ziven match finished 13–11.
 bracket-16-7:
-  status: 30th July
-  date: TBA
+  status: planned
+  date: 30th July
   sets: 1
   opponent_1_name: Andrey Isaevskiy
   opponent_2_name: Grisha Mokin
 
 bracket-16-8:
-  status: 30th July
-  date: TBA
+  status: planned
+  date: 30th July
   sets: 1
   opponent_1_name: Ziven Rokhit
   opponent_2_name: Jayasree Kolanuvada
