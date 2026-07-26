@@ -23,51 +23,51 @@ bracket-16-2:
   opponent_1_name: Vova Drozdov
   opponent_2_name: Ashmeet Jadhav
 
-# Quarter 2: Duncan's path; Naol is the projected quarterfinal challenger.
+# Quarter 2: Duncan's path; Nicole is the projected quarterfinal challenger.
 bracket-16-3:
   status: planned
   date: TBA
   sets: 1
   opponent_1_name: Duncan Cheuk
-  opponent_2_name: Zi
+  opponent_2_name: Jamie Cline
 
 bracket-16-4:
   status: planned
   date: TBA
   sets: 1
-  opponent_1_name: Naol Duguma
-  opponent_2_name: Mahe Chowdury
+  opponent_1_name: Nicole Kirk
+  opponent_2_name: Levon Davtyan
 
 # Round of 16 — right side, top to bottom; one set per match
-# Quarter 3: Julian's path; Ziven is the projected quarterfinal challenger.
+# Quarter 3: Julian's path; Julian and Naol are 1–1 after deduplication.
 bracket-16-5:
   status: planned
   date: TBA
   sets: 1
   opponent_1_name: Julian Ray
-  opponent_2_name: Jayasree Kolanuvada
+  opponent_2_name: Mahe Chowdury
 
 bracket-16-6:
   status: planned
   date: TBA
   sets: 1
-  opponent_1_name: Ziven Rokhit
-  opponent_2_name: Jamie Cline
+  opponent_1_name: Naol Duguma
+  opponent_2_name: Zi Tong Hon
 
-# Quarter 4: Andrey's path; Nicole or Vova will provide the quarterfinal test.
+# Quarter 4: Andrey's path; his only Ziven match finished 13–11.
 bracket-16-7:
   status: planned
   date: TBA
   sets: 1
   opponent_1_name: Andrey Isaevskiy
-  opponent_2_name: Grisha
+  opponent_2_name: Grisha Mokin
 
 bracket-16-8:
   status: planned
   date: TBA
   sets: 1
-  opponent_1_name: Nicole Kirk
-  opponent_2_name: Levon Davtyan
+  opponent_1_name: Ziven Rokhit
+  opponent_2_name: Jayasree Kolanuvada
 
 # Round of 8 — left side, top to bottom
 bracket-8-1:
