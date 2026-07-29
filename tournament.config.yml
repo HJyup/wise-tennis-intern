@@ -9,10 +9,12 @@ tournament:
 # Round of 16 — left side, top to bottom; one set per match
 # Quarter 1: Ibrahim's path; Vova or Ashmeet will provide the quarterfinal test.
 bracket-16-1:
-  status: planned
-  sets: 1
+  status: finished
   opponent_1_name: Ibrahim Mohammad
   opponent_2_name: Raahym
+  score:
+    first: "11_1"
+    second: "11_0"
 
 bracket-16-2:
   status: planned
@@ -72,7 +74,7 @@ bracket-16-8:
 bracket-8-1:
   status: planned
   sets: 3
-  opponent_1_name: TBA
+  opponent_1_name: Ibrahim Mohammad
   opponent_2_name: TBA
 
 bracket-8-2:
