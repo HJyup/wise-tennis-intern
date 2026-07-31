@@ -73,10 +73,13 @@ bracket-16-7:
     second: "11_6"
 
 bracket-16-8:
-  status: planned
-  sets: 1
+  status: finished
+  sets: 31th July
   opponent_1_name: Ziven Rokhit
   opponent_2_name: Jayasree Kolanuvada
+  score:
+    first: "11_5"
+    second: "11_9"
 
 # Round of 8 — left side, top to bottom
 bracket-8-1:
@@ -102,7 +105,7 @@ bracket-8-4:
   status: planned
   sets: 3
   opponent_1_name: Andrey Isaevskiy
-  opponent_2_name: TBA
+  opponent_2_name: Ziven Rokhit
 
 # Semifinals
 bracket-4-1:
