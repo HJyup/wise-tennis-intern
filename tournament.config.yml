@@ -10,6 +10,7 @@ tournament:
 # Quarter 1: Ibrahim's path; Vova or Ashmeet will provide the quarterfinal test.
 bracket-16-1:
   status: finished
+  date: 29th July
   opponent_1_name: Ibrahim Mohammad
   opponent_2_name: Raahym
   score:
@@ -53,6 +54,7 @@ bracket-16-5:
 
 bracket-16-6:
   status: finished
+  date: 30th July
   sets: 3
   opponent_1_name: Naol Duguma
   opponent_2_name: Zi Tong Hon
@@ -62,6 +64,7 @@ bracket-16-6:
 # Quarter 4: Andrey's path; his only Ziven match finished 13–11.
 bracket-16-7:
   status: finished
+  date: 30th July
   sets: 3
   opponent_1_name: Andrey Isaevskiy
   opponent_2_name: Grisha Mokin
