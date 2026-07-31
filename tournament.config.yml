@@ -52,11 +52,13 @@ bracket-16-5:
     second: "11_6"
 
 bracket-16-6:
-  status: planned
-  sets: 1
+  status: finished
+  sets: 3
   opponent_1_name: Naol Duguma
   opponent_2_name: Zi Tong Hon
-
+  score:
+    first: "11_3"
+    second: "11_3"
 # Quarter 4: Andrey's path; his only Ziven match finished 13–11.
 bracket-16-7:
   status: planned
@@ -88,7 +90,7 @@ bracket-8-3:
   status: planned
   sets: 3
   opponent_1_name: Julian Ray
-  opponent_2_name: TBA
+  opponent_2_name: Naol Duguma
 
 bracket-8-4:
   status: planned
