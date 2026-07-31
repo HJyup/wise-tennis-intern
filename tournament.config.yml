@@ -61,10 +61,13 @@ bracket-16-6:
     second: "11_3"
 # Quarter 4: Andrey's path; his only Ziven match finished 13–11.
 bracket-16-7:
-  status: planned
-  sets: 1
+  status: finished
+  sets: 3
   opponent_1_name: Andrey Isaevskiy
   opponent_2_name: Grisha Mokin
+  score:
+    first: "11_5"
+    second: "11_6"
 
 bracket-16-8:
   status: planned
@@ -95,7 +98,7 @@ bracket-8-3:
 bracket-8-4:
   status: planned
   sets: 3
-  opponent_1_name: TBA
+  opponent_1_name: Andrey Isaevskiy
   opponent_2_name: TBA
 
 # Semifinals
