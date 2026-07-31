@@ -11,11 +11,11 @@ tournament:
 bracket-16-1:
   status: finished
   date: 29th July
-  opponent_1_name: Ibrahim Mohammad
-  opponent_2_name: Raahym
+  opponent_1_name: Raahym
+  opponent_2_name: Ibrahim Mohammad
   score:
-    first: "11_1"
-    second: "11_0"
+    first: "1_11"
+    second: "0_11"
 
 bracket-16-2:
   status: planned
@@ -27,8 +27,8 @@ bracket-16-2:
 bracket-16-3:
   status: planned
   sets: 1
-  opponent_1_name: Duncan Cheuk
-  opponent_2_name: Jamie Cline
+  opponent_1_name: Jamie Cline
+  opponent_2_name: Duncan Cheuk
 
 bracket-16-4:
   status: finished
@@ -46,11 +46,11 @@ bracket-16-5:
   status: finished
   date: 27th July
   sets: 3
-  opponent_1_name: Julian Ray
-  opponent_2_name: Mahe Chowdurya
+  opponent_1_name: Mahe Chowdurya
+  opponent_2_name: Julian Ray
   score:
-    first: "13_11"
-    second: "11_6"
+    first: "11_13"
+    second: "6_11"
 
 bracket-16-6:
   status: finished
@@ -66,11 +66,11 @@ bracket-16-7:
   status: finished
   date: 30th July
   sets: 3
-  opponent_1_name: Andrey Isaevskiy
-  opponent_2_name: Grisha Mokin
+  opponent_1_name: Grisha Mokin
+  opponent_2_name: Andrey Isaevskiy
   score:
-    first: "11_5"
-    second: "11_6"
+    first: "5_11"
+    second: "6_11"
 
 bracket-16-8:
   status: finished
