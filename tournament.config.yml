@@ -25,10 +25,14 @@ bracket-16-2:
 
 # Quarter 2: Duncan's path; Nicole is the projected quarterfinal challenger.
 bracket-16-3:
-  status: planned
-  sets: 1
+  status: finished
+  date: 31th July
+  sets: 3
   opponent_1_name: Jamie Cline
   opponent_2_name: Duncan Cheuk
+  score:
+    first: "5_11"
+    second: "2_11"
 
 bracket-16-4:
   status: finished
@@ -92,7 +96,7 @@ bracket-8-1:
 bracket-8-2:
   status: planned
   sets: 3
-  opponent_1_name: TBA
+  opponent_1_name: Duncan Cheuk
   opponent_2_name: Nicole Kirk
 
 # Round of 8 — right side, top to bottom
